@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f6">
+  <meta name="description" content="A little apology website made by Ankit for Pema, with love.">
+  <title>Operation: Please Don't Be Angry ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loader-heart">♥</div>
+    <p class="eyebrow">ANKIT STUDIOS PRESENTS</p>
+    <h1>Relationship Repair OS</h1>
+    <p id="loadingMessage">Scanning for boyfriend bugs...</p>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <p class="loading-percent" id="loadingPercent">0%</p>
+    <button class="text-button" id="skipLoading">Skip intro →</button>
+  </div>
+
+  <div class="site-shell" id="siteShell">
+    <header class="navbar">
+      <a href="#home" class="brand"><span>♥</span> A + P</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#diagnostics">Diagnostics</a>
+        <a href="#mood">Mood check</a>
+        <a href="#apology">My apology</a>
+        <a href="#ending">The ending</a>
+      </nav>
+      <button class="sound-button" id="soundToggle" aria-pressed="false">♫ Sound: Off</button>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero-copy">
+          <span class="pill"><span class="live-dot"></span> RELATIONSHIP REPAIR DEPARTMENT</span>
+          <h1>Operation:<br><span>Please Don't Be Angry</span> 🥺</h1>
+          <p class="hero-description">
+            An emergency mission initiated by Ankit,
+            specifically for the one and only Pema.
+          </p>
+          <div class="hero-actions">
+            <a href="#diagnostics" class="button button-primary">Start apology protocol <span>♥</span></a>
+            <button class="button button-secondary" id="incidentButton">View incident report ↗</button>
+          </div>
+          <div class="hero-note"><span>✦</span> Made with code, care, and a questionable amount of overthinking.</div>
+        </div>
+
+        <div class="hero-art">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="floating-note note-one">I'm sorry 🥺</div>
+          <div class="floating-note note-two">+999 hearts</div>
+          <div class="character-card">
+            <div class="character-sparkle sparkle-one">✦</div>
+            <div class="character-sparkle sparkle-two">✧</div>
+            <div class="teddy">🧸</div>
+            <div class="mini-heart">♥</div>
+            <h3>For Pema</h3>
+            <p>From your favourite idiot,<br><strong>Ankit ❤️</strong></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section diagnostics-section" id="diagnostics">
+        <div class="section-heading">
+          <span class="eyebrow">01 / TECHNICAL SUPPORT</span>
+          <h2>Relationship <span>Diagnostics</span></h2>
+          <p>Running a very serious investigation into Ankit's questionable decisions.</p>
+        </div>
+
+        <div class="diagnostic-grid">
+          <button class="diagnostic-card" data-diagnostic="common">
+            <span class="card-icon pink-icon">⌘</span>
+            <span class="card-label">COMMON_SENSE.EXE</span>
+            <strong>Not Found</strong>
+            <span class="card-description">Ankit's common sense has gone offline.</span>
+            <span class="card-footer">Click to investigate ↗</span>
+          </button>
+          <button class="diagnostic-card" data-diagnostic="apology">
+            <span class="card-icon purple-icon">♡</span>
+            <span class="card-label">APOLOGY.DLL</span>
+            <strong>Ready to Install</strong>
+            <span class="card-description">A sincere apology is being prepared.</span>
+            <span class="card-footer">Click to investigate ↗</span>
+          </button>
+          <button class="diagnostic-card" data-diagnostic="smile">
+            <span class="card-icon yellow-icon">☻</span>
+            <span class="card-label">PEMA_SMILE.SYS</span>
+            <strong>Awaiting Response</strong>
+            <span class="card-description">Only Pema decides when she's ready.</span>
+            <span class="card-footer">Click to investigate ↗</span>
+          </button>
+          <button class="diagnostic-card" data-diagnostic="brain">
+            <span class="card-icon blue-icon">⚡</span>
+            <span class="card-label">BOYFRIEND_BRAIN.EXE</span>
+            <strong>Update Required</strong>
+            <span class="card-description">Emotional intelligence patch pending.</span>
+            <span class="card-footer">Click to investigate ↗</span>
+          </button>
+        </div>
+
+        <div class="scan-panel">
+          <div class="scan-top">
+            <div><span class="live-dot"></span> SYSTEM STATUS</div>
+            <span id="scanStatus">Waiting for command...</span>
+          </div>
+          <div class="scan-output" id="scanOutput">> Relationship repair system initialized.<br>> Awaiting diagnostic command.</div>
+          <button class="button button-primary" id="scanButton">Run full diagnostics ↗</button>
+        </div>
+      </section>
+
+      <section class="section mood-section" id="mood">
+        <div class="section-heading">
+          <span class="eyebrow">02 / MOOD MONITOR</span>
+          <h2>How's the <span>weather?</span> ☁️</h2>
+          <p>A completely unofficial forecast. Pema gets to choose the actual mood.</p>
+        </div>
+
+        <div class="mood-card">
+          <div class="weather-illustration" id="weatherIllustration">🌦️</div>
+          <p class="eyebrow">PEMA'S MOOD DASHBOARD</p>
+          <h3 id="moodTitle">Forecast: A little unpredictable</h3>
+          <p id="moodMessage">Select an option below, or ignore this silly dashboard entirely.</p>
+          <div class="mood-options">
+            <button class="mood-option" data-mood="okay">😊 I'm okay</button>
+            <button class="mood-option" data-mood="annoyed">😒 Still annoyed</button>
+            <button class="mood-option" data-mood="angry">😤 Pretty angry</button>
+            <button class="mood-option" data-mood="space">🥺 Need some time</button>
+            <button class="mood-option" data-mood="talk">💗 Ready to talk</button>
+          </div>
+          <p class="mood-footnote">No wrong answers. Your feelings don't need to follow a schedule. ❤️</p>
+        </div>
+      </section>
+
+      <section class="section apology-section" id="apology">
+        <div class="apology-layout">
+          <div class="apology-copy">
+            <span class="eyebrow">03 / IMPORTANT SYSTEM MESSAGE</span>
+            <h2>The most important button on this <span>website.</span></h2>
+            <p>
+              Warning: This section contains a little humour, a lot of affection,
+              and an actual attempt to say sorry.
+            </p>
+            <div class="error-message">
+              <span class="error-symbol">!</span>
+              <div>
+                <strong>ERROR 404: PERFECT BOYFRIEND NOT FOUND</strong>
+                <p>Fortunately, this particular idiot is willing to learn.</p>
+              </div>
+            </div>
+            <button class="button button-primary" id="openApology">Read my apology 💌</button>
+          </div>
+
+          <div class="envelope-area">
+            <div class="envelope" id="envelope">
+              <div class="envelope-back"></div>
+              <div class="letter-preview">For Pema,<br><span>with love, Ankit</span> ♥</div>
+              <div class="envelope-flap"></div>
+              <div class="envelope-front"></div>
+              <div class="envelope-heart">♥</div>
+            </div>
+            <p>One letter. Zero excuses. 💗</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section courtroom-section" id="courtroom">
+        <div class="section-heading">
+          <span class="eyebrow">04 / THE COURT IS NOW IN SESSION</span>
+          <h2>The People vs. <span>Ankit</span> ⚖️</h2>
+          <p>The defendant has been accused of some highly questionable boyfriend behaviour.</p>
+        </div>
+        <div class="court-card">
+          <div class="judge-emoji">👨‍⚖️</div>
+          <div class="charges">
+            <p><span>CHARGE 01</span> Being a certified idiot at the wrong moment.</p>
+            <p><span>CHARGE 02</span> Forgetting that listening matters more than excuses.</p>
+            <p><span>CHARGE 03</span> Thinking a website could do all the apologizing.</p>
+            <p><span>CHARGE 04</span> Being ridiculously lucky to have Pema in his life.</p>
+          </div>
+          <button class="button button-primary" id="verdictButton">Reveal the verdict ⚖️</button>
+          <div class="verdict-box hidden" id="verdictBox">
+            <span class="verdict-stamp">GUILTY!</span>
+            <h3>Sentence: Put in the effort.</h3>
+            <p>Listen carefully, communicate honestly, respect her feelings, and keep learning.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section analytics-section" id="analytics">
+        <div class="section-heading">
+          <span class="eyebrow">05 / TOTALLY SCIENTIFIC DATA</span>
+          <h2>Ankit's Love <span>Analytics</span> 📊</h2>
+          <p>These statistics are entirely fictional. The affection is personal.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card"><span>♥</span><strong>∞</strong><p>Hearts for Pema</p></div>
+          <div class="stat-card"><span>☁</span><strong>999+</strong><p>Thoughts about Pema</p></div>
+          <div class="stat-card"><span>↻</span><strong>∞</strong><p>Apology attempts</p></div>
+          <div class="stat-card"><span>⚙</span><strong>Beta</strong><p>Boyfriend software</p></div>
+        </div>
+      </section>
+
+      <section class="section ending-section" id="ending">
+        <div class="ending-heart" id="secretHeart" role="button" tabindex="0" aria-label="Tap five times for a secret message">♥</div>
+        <span class="eyebrow">MISSION STATUS: STILL LEARNING</span>
+        <h2>End of operation.<br><span>Not the effort.</span></h2>
+        <p>
+          This little website may have bugs, but the intention behind it is real.
+          I hope it gives you a little reason to smile, Pema. ❤️
+        </p>
+        <p class="ending-signature">Made with HTML, CSS, JavaScript, and love.<br><strong>— Ankit</strong></p>
+        <div class="ending-actions">
+          <button class="button button-primary" id="restartButton">Restart experience ↻</button>
+          <button class="button button-secondary" id="endingLetterButton">Read the letter again 💌</button>
+          <a class="button button-secondary" href="#home">Back to the top ↑</a>
+        </div>
+        <p class="secret-message hidden" id="secretMessage">Psst, Pema... Ankit built this little website because you matter to him. ❤️</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a href="#home" class="brand"><span>♥</span> A + P</a>
+      <p>© 2026 Ankit's Relationship Repair Department. All hearts reserved.</p>
+      <button class="footer-heart" id="footerHeart" aria-label="Secret message">♥</button>
+    </footer>
+  </div>
+
+  <div class="modal-backdrop hidden" id="modalBackdrop" role="presentation">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close dialog">×</button>
+      <span class="modal-icon" id="modalIcon">💗</span>
+      <h2 id="modalTitle">A little message</h2>
+      <div class="modal-content" id="modalContent"></div>
+      <div class="modal-actions" id="modalActions"></div>
+    </div>
+  </div>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+  <div class="heart-particles" id="heartParticles" aria-hidden="true"></div>
+
+  <noscript>This website needs JavaScript enabled for its interactive features.</noscript>
+</body>
+</html>
